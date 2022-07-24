@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Logo, FormRow } from "../components";
 import Wrapper from "../assets/wrappers/RegisterPage";
 import { toast } from "react-toastify";
+import { useSelector, useDispatch } from "react-redux";
+import { loginUser, registerUser } from "../features/user/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
   email: "",
@@ -12,6 +15,19 @@ const initialState = {
 
 function Register() {
   const [values, setValues] = useState(initialState);
+
+  const {user, isLoading} = useSelector(store => store.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if(user){
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
+    }
+  }, [user]);
+
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
@@ -19,8 +35,14 @@ function Register() {
     e.preventDefault();
     const { email, name, password, isMember } = values;
     if (!email || !password || (!isMember && !name)) {
-      toast("Please fill out all fields");
+      toast.error("Please fill out all fields");
+      return;
     }
+    if(isMember){
+      dispatch(loginUser({email, password}));
+      return;
+    }
+    dispatch(registerUser({name, email,password}));
   };
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
@@ -50,8 +72,8 @@ function Register() {
           value={values.password}
           handleChange={handleChange}
         />
-        <button className="btnv btn-block" type="submit">
-          Submit
+        <button className="btnv btn-block" type="submit" disabled={isLoading}>
+          {isLoading?'Loading ...':'Submit'}
         </button>
         <p>
           {values.isMember ? "Not a member yet ?" : "Already a member"}
