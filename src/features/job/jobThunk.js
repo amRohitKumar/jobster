@@ -18,7 +18,7 @@ export const editJobThunk = async ({ jobId, job }, thunkAPI) => {
     const resp = await customFetch.patch(
       `/jobs/${jobId}`,
       job,
-      authHeader(thunkAPI)
+      authHeader(thunkAPI),
     );
     thunkAPI.dispatch(clearValues());
     return resp.data.msg;
@@ -32,7 +32,7 @@ export const deleteJobThunk = async (jobId, thunkAPI) => {
   try {
     const resp = await customFetch.delete(
       `/jobs/${jobId}`,
-      authHeader(thunkAPI)
+      authHeader(thunkAPI),
     );
     thunkAPI.dispatch(getAllJobs());
     return resp.data.msg;

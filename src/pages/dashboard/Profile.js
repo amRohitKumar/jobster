@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { FormRow } from "../../components";
-import Wrapper from "../../assets/wrappers/DashboardFormPage";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import { FormRow } from "../../components";
+import Wrapper from "../../assets/wrappers/DashboardFormPage";
 import { updateUser } from "../../features/user/userSlice";
 
 const Profile = () => {
@@ -18,16 +18,20 @@ const Profile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, email, lastName, location } = userData;
+    const {
+      name, email, lastName, location,
+    } = userData;
     if (!name || !email || !lastName || !location) {
       toast.error("Please Fill Out All Fields");
       return;
     }
-    dispatch(updateUser({ name, email, lastName, location }));
+    dispatch(updateUser({
+      name, email, lastName, location,
+    }));
   };
   const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
+    const { name } = e.target;
+    const { value } = e.target;
     setUserData({ ...userData, [name]: value });
   };
   return (

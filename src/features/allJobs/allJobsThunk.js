@@ -2,8 +2,9 @@ import customFetch from "../../utils/axios";
 import authHeader from "../../utils/userAuthHeader";
 
 export const getAllJobsThunk = async (_, thunkAPI) => {
-  const { page, search, searchStatus, searchType, sort } =
-    thunkAPI.getState().allJobs;
+  const {
+    page, search, searchStatus, searchType, sort,
+  } = thunkAPI.getState().allJobs;
 
   let url = `/jobs?status=${searchStatus}&jobType=${searchType}&sort=${sort}&page=${page}`;
   if (search) url += `&search=${search}`;

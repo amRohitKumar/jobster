@@ -1,11 +1,11 @@
-import Wrapper from "../assets/wrappers/SmallSidebar";
 import { FaTimes } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import Wrapper from "../assets/wrappers/SmallSidebar";
 import Logo from "./Logo";
 import { toggleSidebar } from "../features/user/userSlice";
-import { useSelector, useDispatch } from "react-redux";
 import NavLinks from "./NavLinks";
 
-export const SmallSidebar = () => {
+const SmallSidebar = () => {
   const { isSidebarOpen } = useSelector((store) => store.user);
   const dispatch = useDispatch();
 
@@ -18,6 +18,7 @@ export const SmallSidebar = () => {
       >
         <div className="content">
           <button
+            type="button"
             className="close-btn"
             onClick={() => dispatch(toggleSidebar())}
           >
@@ -27,7 +28,7 @@ export const SmallSidebar = () => {
             <Logo />
           </header>
           <div className="nav-links">
-            {<NavLinks toggleSidebar={() => dispatch(toggleSidebar())} />}
+            <NavLinks toggleSidebar={() => dispatch(toggleSidebar())} />
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
-import StatItem from "./StatItem";
 import { FaSuitcaseRolling, FaCalendarCheck, FaBug } from "react-icons/fa";
-import Wrapper from "../assets/wrappers/StatsContainer";
 import { useSelector } from "react-redux";
+import StatItem from "./StatItem";
+import Wrapper from "../assets/wrappers/StatsContainer";
+
 const StatsContainer = () => {
   const { stats } = useSelector((store) => store.allJobs);
   const defaultStats = [
@@ -30,9 +31,7 @@ const StatsContainer = () => {
 
   return (
     <Wrapper>
-      {defaultStats.map((item, index) => {
-        return <StatItem key={index} {...item} />;
-      })}
+      {defaultStats.map((item, index) => <StatItem key={index} {...item} />)}
     </Wrapper>
   );
 };

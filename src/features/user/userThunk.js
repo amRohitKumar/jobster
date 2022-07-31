@@ -27,11 +27,10 @@ export const updateUserThunk = async (user, thunkAPI) => {
     const resp = await customFetch.patch(
       "/auth/updateUser",
       user,
-      authHeader(thunkAPI)
+      authHeader(thunkAPI),
     );
     return resp.data;
   } catch (error) {
-    console.log(error.response);
     return thunkAPI.rejectWithValue(error.response.data.msg);
   }
 };

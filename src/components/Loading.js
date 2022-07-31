@@ -1,5 +1,3 @@
-const Loading = ({ center }) => {
-  return <div className={center ? "loading loading-center" : "loading"}></div>;
-};
+const Loading = ({ center }) => <div className={center ? "loading loading-center" : "loading"} />;
 
 export default Loading;

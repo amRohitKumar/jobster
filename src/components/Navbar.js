@@ -1,11 +1,9 @@
 import { useState } from "react";
-import Wrapper from "../assets/wrappers/Navbar";
 import { FaAlignLeft, FaUserCircle, FaCaretDown } from "react-icons/fa";
-import Logo from "./Logo";
-import { toggleSidebar } from "../features/user/userSlice";
-import { clearStore } from "../features/user/userSlice";
-
 import { useDispatch, useSelector } from "react-redux";
+import Wrapper from "../assets/wrappers/Navbar";
+import Logo from "./Logo";
+import { toggleSidebar, clearStore } from "../features/user/userSlice";
 
 const Navbar = () => {
   const { user } = useSelector((store) => store.user);

@@ -28,18 +28,14 @@ const jobSlice = createSlice({
     handleChange: (state, { payload: { name, value } }) => {
       state[name] = value;
     },
-    clearValues: () => {
-      return initialState;
-    },
-    setEditJob: (state, { payload }) => {
-      return { ...state, isEditing: true, ...payload };
-    },
+    clearValues: () => initialState,
+    setEditJob: (state, { payload }) => ({ ...state, isEditing: true, ...payload }),
   },
   extraReducers: {
     [createJob.pending]: (state) => {
       state.isLoading = true;
     },
-    [createJob.fulfilled]: (state, { payload }) => {
+    [createJob.fulfilled]: (state) => {
       state.isLoading = false;
       toast.success("Job created !");
     },
@@ -50,7 +46,7 @@ const jobSlice = createSlice({
     [editJob.pending]: (state) => {
       state.isLoading = true;
     },
-    [editJob.fulfilled]: (state, { payload }) => {
+    [editJob.fulfilled]: (state) => {
       state.isLoading = false;
       toast.success("Job edited !");
     },
