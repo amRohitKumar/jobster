@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
+import { clearStoreThunk } from "./userThunk";
 
 import {
   addUserToLocalStorage,
@@ -27,6 +28,8 @@ export const registerUser = createAsyncThunk(
 export const loginUser = createAsyncThunk("user/loginUser", loginUserThunk);
 
 export const updateUser = createAsyncThunk("user/updateUser", updateUserThunk);
+
+export const clearStore = createAsyncThunk("user/clearStore", clearStoreThunk);
 
 const userSlice = createSlice({
   name: "user",
@@ -84,6 +87,9 @@ const userSlice = createSlice({
     [updateUser.rejected]: (state, { payload }) => {
       state.isLoading = false;
       toast.error(payload);
+    },
+    [clearStore.rejected]: (state) => {
+      toast.error("There was an error !");
     },
   },
 });
