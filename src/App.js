@@ -9,12 +9,20 @@ import {
   AllJobs,
   AddJob,
 } from "./pages/dashboard";
+import { ProtectedRoutes } from "./components";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
+        <Route
+          path="/"
+          element={
+            <ProtectedRoutes>
+              <SharedLayout />
+            </ProtectedRoutes>
+          }
+        >
           <Route index element={<Stats />} />
           <Route path="all-jobs" element={<AllJobs />} />
           <Route path="add-job" element={<AddJob />} />
