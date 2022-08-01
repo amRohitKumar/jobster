@@ -39,18 +39,17 @@ const JobsContainer = () => {
   return (
     <Wrapper>
       <h5>
-        {totalJobs}
-        {" "}
-        {jobs.length > 1 ? "Jobs" : "Job"}
-        {" "}
-        found
+        {totalJobs} {jobs.length > 1 ? "Jobs" : "Job"} found
       </h5>
       <div className="jobs">
-        {jobs.map((job) => <Job key={job._id} {...job} />)}
+        {jobs.map((job) => (
+          <Job key={job._id} {...job} />
+        ))}
       </div>
-      {numOfPages && <PageBtnContainer />}
+      {numOfPages > 1 && <PageBtnContainer />}
     </Wrapper>
   );
 };
 
 export default JobsContainer;
+

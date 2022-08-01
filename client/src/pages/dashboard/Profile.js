@@ -18,16 +18,19 @@ const Profile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const {
-      name, email, lastName, location,
-    } = userData;
+    const { name, email, lastName, location } = userData;
     if (!name || !email || !lastName || !location) {
       toast.error("Please Fill Out All Fields");
       return;
     }
-    dispatch(updateUser({
-      name, email, lastName, location,
-    }));
+    dispatch(
+      updateUser({
+        name,
+        email,
+        lastName,
+        location,
+      })
+    );
   };
   const handleChange = (e) => {
     const { name } = e.target;
@@ -75,3 +78,4 @@ const Profile = () => {
 };
 
 export default Profile;
+

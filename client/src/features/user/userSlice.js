@@ -21,7 +21,7 @@ const initialState = {
 
 export const registerUser = createAsyncThunk(
   "user/registerUser",
-  registerUserThunk,
+  registerUserThunk
 );
 
 export const loginUser = createAsyncThunk("user/loginUser", loginUserThunk);
@@ -50,6 +50,7 @@ const userSlice = createSlice({
     },
     [registerUser.fulfilled]: (state, { payload }) => {
       const { user } = payload;
+      console.log(user);
       state.isLoading = false;
       state.user = user;
       addUserToLocalStorage(user);
@@ -95,3 +96,4 @@ const userSlice = createSlice({
 
 export const { toggleSidebar, logoutUser } = userSlice.actions;
 export default userSlice.reducer;
+

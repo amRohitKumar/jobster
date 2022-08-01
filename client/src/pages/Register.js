@@ -9,6 +9,7 @@ import { loginUser, registerUser } from "../features/user/userSlice";
 const initialState = {
   email: "",
   name: "",
+  lastName: "",
   password: "",
   isMember: true,
 };
@@ -33,9 +34,7 @@ const Register = () => {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    const {
-      email, name, password, isMember,
-    } = values;
+    const { email, name, lastName, password, isMember } = values;
     if (!email || !password || (!isMember && !name)) {
       toast.error("Please fill out all fields");
       return;
@@ -44,7 +43,7 @@ const Register = () => {
       dispatch(loginUser({ email, password }));
       return;
     }
-    dispatch(registerUser({ name, email, password }));
+    dispatch(registerUser({ name, email, password, lastName }));
   };
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
@@ -55,12 +54,21 @@ const Register = () => {
         <Logo />
         <h3>{values.isMember ? "LogIn" : "Register"}</h3>
         {!values.isMember && (
-          <FormRow
-            type="text"
-            name="name"
-            value={values.name}
-            handleChange={handleChange}
-          />
+          <>
+            <FormRow
+              type="text"
+              name="name"
+              value={values.name}
+              handleChange={handleChange}
+            />
+            <FormRow
+              type="text"
+              name="lastName"
+              labelText="Last name"
+              value={values.lastName}
+              handleChange={handleChange}
+            />
+          </>
         )}
         <FormRow
           type="email"
@@ -83,7 +91,7 @@ const Register = () => {
           disabled={isLoading}
           onClick={() => {
             dispatch(
-              loginUser({ email: "testUser@test.com", password: "secret" }),
+              loginUser({ email: "testUser@test.com", password: "secret" })
             );
           }}
         >
@@ -105,3 +113,4 @@ const Register = () => {
 };
 
 export default Register;
+
