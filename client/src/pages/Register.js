@@ -34,7 +34,9 @@ const Register = () => {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    const { email, name, lastName, password, isMember } = values;
+    const {
+      email, name, lastName, password, isMember,
+    } = values;
     if (!email || !password || (!isMember && !name)) {
       toast.error("Please fill out all fields");
       return;
@@ -43,7 +45,9 @@ const Register = () => {
       dispatch(loginUser({ email, password }));
       return;
     }
-    dispatch(registerUser({ name, email, password, lastName }));
+    dispatch(registerUser({
+      name, email, password, lastName,
+    }));
   };
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
@@ -91,7 +95,7 @@ const Register = () => {
           disabled={isLoading}
           onClick={() => {
             dispatch(
-              loginUser({ email: "testUser@test.com", password: "secret" })
+              loginUser({ email: "testUser@test.com", password: "secret" }),
             );
           }}
         >
@@ -113,4 +117,3 @@ const Register = () => {
 };
 
 export default Register;
-

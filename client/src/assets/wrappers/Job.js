@@ -46,6 +46,8 @@ const Wrapper = styled.article`
     color: #e9b949;
   }
   .interview {
+    padding: 2px 10px;
+    width: max-content !important;
     background: #e0e8f9;
     color: #647acb;
   }

@@ -18,6 +18,7 @@ const JobSchema = new Schema(
       enum: ["interview", "declined", "pending"],
       default: "pending",
     },
+    interviewDate: String,
     jobType: {
       type: String,
       enum: ["full-time", "part-time", "remote", "internship"],

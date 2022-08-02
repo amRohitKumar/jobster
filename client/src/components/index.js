@@ -10,6 +10,7 @@ import SearchContainer from "./SearchContainer";
 import Loading from "./Loading";
 import StatsContainer from "./StatsContainer";
 import ChartsContainer from "./ChartsContainer";
+import InterviewCalender from "./Calender";
 
 export {
   Logo,
@@ -24,4 +25,5 @@ export {
   Loading,
   StatsContainer,
   ChartsContainer,
+  InterviewCalender,
 };

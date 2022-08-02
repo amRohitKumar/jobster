@@ -23,6 +23,7 @@ const AddJob = () => {
     statusOptions,
     isEditing,
     editJobId,
+    interviewDate,
   } = useSelector((store) => store.job);
   const dispatch = useDispatch();
 
@@ -38,13 +39,13 @@ const AddJob = () => {
         editJob({
           jobId: editJobId,
           job: {
-            position, company, jobLocation, jobType, status,
+            position, company, jobLocation, jobType, status, interviewDate,
           },
         }),
       );
     } else {
       dispatch(createJob({
-        position, company, jobLocation, status, jobType,
+        position, company, jobLocation, status, jobType, interviewDate,
       }));
     }
   };
@@ -92,6 +93,19 @@ const AddJob = () => {
             handleChange={handleJobInput}
             list={statusOptions}
           />
+          {/* interview date */}
+          {
+            status === "interview"
+            && (
+            <FormRow
+              type="date"
+              labelText="interview date"
+              name="interviewDate"
+              value={interviewDate}
+              handleChange={handleJobInput}
+            />
+            )
+          }
           {/* job type */}
           <FormRowSelect
             name="jobType"

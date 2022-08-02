@@ -14,9 +14,11 @@ const Job = ({
   jobType,
   createdAt,
   status,
+  interviewDate,
 }) => {
   const dispatch = useDispatch();
   const date = moment(createdAt).format("MMM Do YY");
+  const interviewDateFormated = moment(interviewDate).format("MMM Do YY");
   return (
     <Wrapper>
       <header>
@@ -31,7 +33,11 @@ const Job = ({
           <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
           <JobInfo icon={<FaCalendarAlt />} text={date} />
           <JobInfo icon={<FaBriefcase />} text={jobType} />
-          <div className={`status ${status}`}>{status}</div>
+          <div className={`status ${status}`}>
+            {status}
+            {" "}
+            {status === "interview" && `on ${interviewDateFormated}`}
+          </div>
         </div>
         <footer>
           <div className="actions">

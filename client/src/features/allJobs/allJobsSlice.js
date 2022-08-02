@@ -13,6 +13,7 @@ const initialFiltersState = {
 const initialState = {
   isLoading: false,
   jobs: [],
+  upcomingInterviews: [],
   totalJobs: 0,
   numOfPages: 1,
   page: 1,
@@ -66,6 +67,7 @@ const allJobsSlice = createSlice({
       state.isLoading = false;
       state.stats = payload.defaultStats;
       state.monthlyApplications = payload.monthlyApplications;
+      state.upcomingInterviews = payload.upcomingInterviews;
     },
     [showStats.rejected]: (state, { payload }) => {
       state.isLoading = false;

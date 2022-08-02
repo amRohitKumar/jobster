@@ -13,6 +13,7 @@ const initialState = {
   status: "pending",
   isEditing: false,
   editJobId: "",
+  interviewDate: "",
 };
 
 export const createJob = createAsyncThunk("job/createJob", createJobThunk);
