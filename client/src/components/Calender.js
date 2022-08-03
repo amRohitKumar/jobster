@@ -7,14 +7,6 @@ import Wrapper from "../assets/wrappers/Calender";
 import "react-calendar/dist/Calendar.css";
 import "../Calendar.css";
 
-// const tileContent = ({ date, view }) => {
-//   // const formatedDate = moment(date).format("YYYY-MM-DD");
-//   // console.log(formatedDate);
-//   if (view === "month") {
-//     if (date.getDay() === 0) return <p>ss</p>;
-//     return null;
-//   }
-// };
 const InterviewCalender = () => {
   const [val, setDate] = useState(new Date());
   const { upcomingInterviews } = useSelector((store) => store.allJobs);
@@ -46,7 +38,7 @@ const InterviewCalender = () => {
   return (
     <Wrapper>
       <h4>Interview Calender</h4>
-
+      <span className="info-text">Your upcoming interviews</span>
       <Calender
         value={val}
         onChange={setDate}

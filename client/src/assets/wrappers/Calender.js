@@ -6,13 +6,13 @@ const Wrapper = styled.div`
     align-items: center;
     margin: 2.5em 0.5em;
     flex-direction: column;
+
+    .info-text{
+        letter-spacing: var(--letterSpacing);
+        color: var(--primary-500);
+        font-size: 1.25em;
+        margin-bottom: 1em;
+    }
 `;
 
-const CalenderDiv = styled.div`
-    width: 500px;
-    height: 300px;
-    border: 2px solid black;
-`;
-
-export { CalenderDiv };
 export default Wrapper;

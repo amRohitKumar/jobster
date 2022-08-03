@@ -11,6 +11,8 @@ import {
 } from "./pages/dashboard";
 import { ProtectedRoutes } from "./components";
 
+// import "./utils/seedData";
+
 const App = () => (
   <BrowserRouter>
     <Routes>

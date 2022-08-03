@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import links from "../utils/links";
 
 const NavLinks = ({ toggleSidebar }) => (
-  <div className="nav-links">
+  <div className="nav-links" style={{ fontSize: "1.5em" }}>
     {links.map((link) => {
       const {
         text, path, id, icon,

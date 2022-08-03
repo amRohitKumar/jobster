@@ -47,7 +47,6 @@ router.get("/", isLogin, async (req, res) => {
 });
 
 router.post("/", isLogin, async (req, res) => {
-  console.log(req.body);
   const { position, company } = req.body;
   if (!position || !company) {
     return res.status(400).send({ msg: "Please provide all values" });
@@ -88,6 +87,7 @@ router.get("/stats", isLogin, async (req, res) => {
     { $sort: { "_id.year": -1, "_id.month": -1 } },
     { $limit: 6 },
   ]);
+
   const currEpoch = moment().format("YYYY-MM-DD");
   let upcomingInterviews = await Job.aggregate([
     {
@@ -113,10 +113,9 @@ router.get("/stats", isLogin, async (req, res) => {
         count: { $sum: 1 },
       },
     },
-    { $sort: { "_id.year": -1, "_id.month": -1 } },
-    { $limit: 6 },
+    { $sort: { "_id.month": 1, "_id.date": 1 } },
+    { $limit: 10 },
   ]);
-
   monthlyApplications = monthlyApplications
     .map((item) => {
       const {
@@ -130,7 +129,6 @@ router.get("/stats", isLogin, async (req, res) => {
       return { date, count };
     })
     .reverse();
-
   upcomingInterviews = upcomingInterviews.map((item) => {
     const {
       _id: { year, month, date },
@@ -143,7 +141,7 @@ router.get("/stats", isLogin, async (req, res) => {
       .format("YYYY-MM-DD")
     return { time, count };
   });
-  console.log(upcomingInterviews);
+  
   res.status(200).json({ defaultStats, monthlyApplications, upcomingInterviews });
 });
 
