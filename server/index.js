@@ -1,6 +1,5 @@
 import dotenv from 'dotenv';
 import express from 'express';
-import path, { dirname } from 'path';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import authRoutes from './routes/auth.js';
