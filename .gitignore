@@ -24,3 +24,8 @@ yarn-error.log*
 
 seed.json
 **/.env
+
+.vscode/
+build/
+.eslintrc.json
+.prettierrc.json
