@@ -11,16 +11,12 @@ const Landing = () => (
     <div className="container page">
       <div className="info">
         <h1>
-          Job
-          {" "}
-          <span>tracking</span>
-          {" "}
-          app
-          {" "}
+          Job <span>tracking</span> app{" "}
         </h1>
         <p>
-          Fanny pack before they sold out succulents tumeric. Banjo VHS glossier disrupt microdosing.
-          Marfa pork belly fanny pack, intelligentsia retro yr bushwick tbh cloud bread small batch woke typewriter.
+          Funny pack before they sold out succulents tumeric. Banjo VHS glossier
+          disrupt microdosing. Marfa pork belly fanny pack, intelligentsia retro
+          yr bushwick tbh cloud bread small batch woke typewriter.
         </p>
         <Link to="/register" className="btn btn-hero">
           Login/Register
@@ -32,3 +28,4 @@ const Landing = () => (
 );
 
 export default Landing;
+

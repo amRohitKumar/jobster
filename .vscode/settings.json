@@ -1,8 +1,0 @@
-{
-    "editor.formatOnSave": true,
-    "eslint.alwaysShowStatus": true,
-    "eslint.format.enable": true,
-    "eslint.lintTask.enable": true,
-    "eslint.run": "onSave",
-    "prettier.enable": true
-}
