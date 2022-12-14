@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const customFetch = axios.create({
-  baseURL: "https://rocky-oasis-62410.herokuapp.com",
+  baseURL: "https://jobster-production.up.railway.app",
   headers: {
-    "Access-Control-Allow-Origin": "https://rocky-oasis-62410.herokuapp.com",
+    "Access-Control-Allow-Origin": "https://jobster-production.up.railway.app/",
     "Content-Type": "application/json",
   },
 });
