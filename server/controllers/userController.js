@@ -109,7 +109,7 @@ const getStats = async (req, res) => {
         count: { $sum: 1 },
       },
     },
-    { $sort: { "_id.month": 1, "_id.date": 1 } },
+    { $sort: { "_id.year": 1, "_id.month": 1, "_id.date": 1 } },
     { $limit: 10 },
   ]);
   monthlyApplications = monthlyApplications
