@@ -1,4 +1,4 @@
-<a name="readme-top"></a>
+<a name="readme-top" id="readme-top"></a>
 
 <!-- PROJECT LOGO -->
 <br />
@@ -38,11 +38,8 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -50,7 +47,7 @@
 
 ## About The Project
 
-<img src="https://jobster-project.netlify.app/jobster-landing-md.png" alt="website-landing-page" width="" height="">
+<img src="https://jobster-project.netlify.app/static/images/jobster-landing-md.png" alt="website-landing-page" width="" height="">
 
 We understand how important it is to know the status of your job application. That is why our website provides you with a Job Tracker tool to help you stay informed of your job process.
 
@@ -120,19 +117,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ## Usage
 
-
-<img src="https://jobster-project.netlify.app/project-screenshot-1.png" alt="website-landing-page" width="" height="">
-
-<img src="https://jobster-project.netlify.app/project-screenshot-2.png" alt="website-landing-page" width="" height="">
-
-<img src="https://jobster-project.netlify.app/project-screenshot-3.png" alt="website-landing-page" width="" 
-height="">
-
-<img src="https://jobster-project.netlify.app/project-screenshot-4.png" alt="website-landing-page" width="" height="">
-
-<img src="https://jobster-project.netlify.app/project-screenshot-5.png" alt="website-landing-page" width="" height="">
-
-<img src="https://jobster-project.netlify.app/project-screenshot-6.png" alt="website-landing-page" width="" height="">
+<br>
 
 1. Start server
    ```sh
@@ -142,8 +127,28 @@ height="">
     ```sh
     cd client && npm start
     ```
+<br>
+
 _Screenshots_
 
+<p align="middle">
+<img src="https://jobster-project.netlify.app/static/images/project-screenshot-1.png" alt="website-landing-page" width="45%" height="250"> 
+&nbsp; &nbsp; &nbsp; &nbsp;
+<img src="https://jobster-project.netlify.app/static/images/project-screenshot-2.png" alt="website-landing-page" width="45%" height="250"> 
+</p>
+
+<p align="middle">
+<img src="https://jobster-project.netlify.app/static/images/project-screenshot-3.png" alt="website-landing-page" width="45%" height="250"> 
+&nbsp; &nbsp; &nbsp; &nbsp;
+<img src="https://jobster-project.netlify.app/static/images/project-screenshot-4.png" alt="website-landing-page" width="45%" height="250"> 
+</p>
+
+<p align="middle">
+<img src="https://jobster-project.netlify.app/static/images/project-screenshot-5.png" alt="website-landing-page" width="45%" height="250"> 
+&nbsp; &nbsp; &nbsp; &nbsp;
+<img src="https://jobster-project.netlify.app/static/images/project-screenshot-6.png" alt="website-landing-page" width="45%" height="250"> 
+</p>
+<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
