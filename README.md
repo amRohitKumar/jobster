@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://jobster-project.netlify.app/landing">
-    <img src="./client/public/favicon.ico" alt="Logo" width="80" height="80">
+    <img src="https://jobster-project.netlify.app/favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Jobster</h3>
@@ -12,7 +12,7 @@
   <p align="center">
     With our comprehensive job tracking system, you can easily follow up on job leads, interviews and offers, and stay on top of your job search. Our goal is to help you find the perfect job match, faster.
     <br />
-    <a href="https://jobster-project.netlify.app/register">View Demo</a>
+    <a href="https://jobster-project.netlify.app">View Demo</a>
     &nbsp;.&nbsp;
     <a href="https://github.com/amRohitKumar/jobster/issues">Report Bug</a>
     &nbsp;.&nbsp;
@@ -50,7 +50,7 @@
 
 ## About The Project
 
-<img src="./images/jobster-landing-md.png" alt="website-landing-page" width="" height="">
+<img src="https://github.com/amRohitKumar/jobster/blob/master/images/jobster-landing-md.png?raw=true" alt="website-landing-page" width="" height="">
 
 We understand how important it is to know the status of your job application. That is why our website provides you with a Job Tracker tool to help you stay informed of your job process.
 
