@@ -14,9 +14,13 @@ const Landing = () => (
           Job <span>tracking</span> app{" "}
         </h1>
         <p>
-          Funny pack before they sold out succulents tumeric. Banjo VHS glossier
-          disrupt microdosing. Marfa pork belly fanny pack, intelligentsia retro
-          yr bushwick tbh cloud bread small batch woke typewriter.
+          We understand how important it is to know the status of your job
+          application. That is why our website provides you with a Job Tracker
+          tool to help you stay informed of your job process. This easy-to-use
+          system allows you to easily view the progress of your application and
+          access all of your job-related information. With our Job Tracker, you
+          can easily track the status of each of your applications and stay
+          up-to-date on any changes or updates throughout the hiring process.
         </p>
         <Link to="/register" className="btn btn-hero">
           Login/Register
@@ -28,4 +32,3 @@ const Landing = () => (
 );
 
 export default Landing;
-
