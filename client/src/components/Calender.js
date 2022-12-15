@@ -38,7 +38,7 @@ const InterviewCalender = () => {
   return (
     <Wrapper>
       <h4>Interview Calender</h4>
-      <span className="info-text">Your upcoming interviews</span>
+      <span className="info-text">Your upcoming interviews (max 10)</span>
       <Calender
         value={val}
         onChange={setDate}

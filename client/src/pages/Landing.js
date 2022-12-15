@@ -11,7 +11,9 @@ const Landing = () => (
     <div className="container page">
       <div className="info">
         <h1>
-          Job <span>tracking</span> app{" "}
+          Job
+          <span>tracking</span>
+          app
         </h1>
         <p>
           We understand how important it is to know the status of your job

@@ -1,5 +1,5 @@
 const FormRow = ({
-  type, name, value, handleChange, labelText,
+  type, name, value, handleChange, labelText, ...otherProps
 }) => (
   <div className="form-row">
     <label htmlFor={name} className="form-label">
@@ -12,6 +12,7 @@ const FormRow = ({
       onChange={handleChange}
       className="form-input"
       id={name}
+      {...otherProps}
     />
   </div>
 );

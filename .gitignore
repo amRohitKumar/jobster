@@ -29,3 +29,5 @@ seed.json
 build/
 .eslintrc.json
 .prettierrc.json
+
+server/seeding

@@ -18,6 +18,10 @@ const Profile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (user.email === "dummy@gmail.com") {
+      toast.error("Can't edit Dummy user");
+      return;
+    }
     const {
       name, email, lastName, location,
     } = userData;
@@ -63,6 +67,7 @@ const Profile = () => {
             name="email"
             value={userData.email}
             handleChange={handleChange}
+            disabled="true"
           />
           <FormRow
             type="text"

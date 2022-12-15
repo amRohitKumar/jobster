@@ -11,7 +11,7 @@ import {
 } from "../../features/job/jobSlice";
 
 const AddJob = () => {
-  const { location } = useSelector((store) => store.user.user);
+  const { location, email } = useSelector((store) => store.user.user);
   const {
     isLoading,
     position,
@@ -29,7 +29,10 @@ const AddJob = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (email === "dummy@gmail.com") {
+      toast.error("Can't edit Dummy user !");
+      return;
+    }
     if (!position || !company || !jobLocation) {
       toast.error("Please Fill Out All Fields");
       return;

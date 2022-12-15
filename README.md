@@ -50,7 +50,7 @@
 
 ## About The Project
 
-<img src="https://github.com/amRohitKumar/jobster/blob/master/images/jobster-landing-md.png?raw=true" alt="website-landing-page" width="" height="">
+<img src="https://jobster-project.netlify.app/jobster-landing-md.png" alt="website-landing-page" width="" height="">
 
 We understand how important it is to know the status of your job application. That is why our website provides you with a Job Tracker tool to help you stay informed of your job process.
 
@@ -119,6 +119,20 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 
 ## Usage
+
+
+<img src="https://jobster-project.netlify.app/project-screenshot-1.png" alt="website-landing-page" width="" height="">
+
+<img src="https://jobster-project.netlify.app/project-screenshot-2.png" alt="website-landing-page" width="" height="">
+
+<img src="https://jobster-project.netlify.app/project-screenshot-3.png" alt="website-landing-page" width="" 
+height="">
+
+<img src="https://jobster-project.netlify.app/project-screenshot-4.png" alt="website-landing-page" width="" height="">
+
+<img src="https://jobster-project.netlify.app/project-screenshot-5.png" alt="website-landing-page" width="" height="">
+
+<img src="https://jobster-project.netlify.app/project-screenshot-6.png" alt="website-landing-page" width="" height="">
 
 1. Start server
    ```sh
