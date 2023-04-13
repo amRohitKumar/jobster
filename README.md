@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://jobster-project.netlify.app/landing">
+  <a href="https://jobster-project.netlify.app">
     <img src="https://jobster-project.netlify.app/favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
